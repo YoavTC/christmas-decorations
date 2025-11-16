@@ -1,0 +1,38 @@
+{
+	"criteria": {
+		"place": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"item": {},
+				"entity": [
+					{
+						"condition": "entity_properties",
+						"entity": "this",
+						"predicate": {
+							"type": "minecraft:item_frame",
+							"nbt": "{Facing:1b}"
+						}
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"nbt": "{Tags:[\"christmasdeco_origin\"]}"
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"place"
+		]
+	],
+	"rewards": {
+		"function": "christmasdeco:event_listeners/on_place"
+	}
+}

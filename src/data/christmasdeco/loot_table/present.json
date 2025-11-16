@@ -1,0 +1,66 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:debug_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": false,
+                "minecraft:item_model": "chest",
+                "minecraft:custom_data": {
+                  "christmasdeco": true,
+                  "christmasdeco_id": "present",
+                  "christmasdeco_width": 1.0,
+                  "christmasdeco_height": 1.0
+                },
+                "minecraft:custom_name": [
+                  {
+                    "text": "❄ ",
+                    "color": "#ec2d53",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "Present Decoration",
+                    "color": "white",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": " ❄",
+                    "color": "#ec2d53",
+                    "bold": true,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    {
+                      "text": "Model by AHDPEY",
+                      "color": "dark_gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    {
+                      "text": "bde.gg/b/87003",
+                      "color": "dark_gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

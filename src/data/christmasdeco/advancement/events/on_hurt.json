@@ -1,0 +1,21 @@
+{
+	"criteria": {
+		"hurt": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"type": "minecraft:interaction",
+					"nbt": "{Tags:[christmasdeco_triggerbox]}"
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"hurt"
+		]
+	],
+	"rewards": {
+		"function": "christmasdeco:event_listeners/on_hurt"
+	}
+}

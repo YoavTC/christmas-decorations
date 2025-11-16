@@ -1,0 +1,152 @@
+:root {
+    --bg: #871d2b;
+    --surface: #345e40;
+    --border: rgb(255, 255, 255);
+    --text: #f3f5f7;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+figcaption {
+    padding: 16px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+figcaption h3 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+figure {
+    margin: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+figure img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+h2, h3 {
+    margin: 0 0 12px;
+}
+
+header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.item img {
+    aspect-ratio: 1 / 1;
+    width: 32px;
+}
+
+main {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 40px 20px 72px;
+}
+
+nav {
+    margin: 0 auto;
+    width: 65%;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+nav a:hover {
+    color: var(--text);
+}
+
+nav ul {
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 0.95rem;
+}
+
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+}
+
+section {
+    margin-bottom: 64px;
+}
+
+#div1 {
+    display: grid;
+    grid-template-columns: auto .85fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    margin: 0;
+    padding: 35px;
+    padding-bottom: 0px;
+}
+
+#div2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    padding-right: 5%;
+}
+
+#div3 {
+    aspect-ratio: 16 / 9;
+}
+
+#div3 iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+}

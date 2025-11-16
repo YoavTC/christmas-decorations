@@ -1,0 +1,9 @@
+execute if score @p[tag=christmasdeco_placer] christmasdeco.dir matches -22..22 run return run rotate @s 0 0
+execute if score @p[tag=christmasdeco_placer] christmasdeco.dir matches 23..67 run return run rotate @s 45 0
+execute if score @p[tag=christmasdeco_placer] christmasdeco.dir matches 68..112 run return run rotate @s 90 0
+execute if score @p[tag=christmasdeco_placer] christmasdeco.dir matches 113..157 run return run rotate @s 135 0
+execute if score @p[tag=christmasdeco_placer] christmasdeco.dir matches 158..180 run return run rotate @s 180 0
+execute if score @p[tag=christmasdeco_placer] christmasdeco.dir matches -180..-158 run return run rotate @s -180 0
+execute if score @p[tag=christmasdeco_placer] christmasdeco.dir matches -157..-113 run return run rotate @s -135 0
+execute if score @p[tag=christmasdeco_placer] christmasdeco.dir matches -112..-68 run return run rotate @s -90 0
+execute if score @p[tag=christmasdeco_placer] christmasdeco.dir matches -67..-23 run return run rotate @s -45 0

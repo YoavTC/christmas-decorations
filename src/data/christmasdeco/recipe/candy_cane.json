@@ -1,0 +1,65 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "minecraft:sugar",
+    "A": "minecraft:red_dye"
+  },
+  "pattern": [
+    "#A ",
+    " # ",
+    " A "
+  ],
+  "result": {
+    "components": {
+      "minecraft:enchantment_glint_override": false,
+      "minecraft:item_model": "firework_rocket",
+      "minecraft:custom_data": {
+        "christmasdeco": true,
+        "christmasdeco_id": "candy_cane",
+        "christmasdeco_width": 1.0,
+        "christmasdeco_height": 1.0
+      },
+      "minecraft:custom_name": [
+        {
+          "text": "❄ ",
+          "color": "#ec2d53",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "Candy Cane Decoration",
+          "color": "white",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": " ❄",
+          "color": "#ec2d53",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "minecraft:lore": [
+        [
+          {
+            "text": "Model by Herr_Aleks",
+            "color": "dark_gray",
+            "bold": false,
+            "italic": false
+          }
+        ],
+        [
+          {
+            "text": "bde.gg/b/23912",
+            "color": "dark_gray",
+            "bold": false,
+            "italic": false
+          }
+        ]
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:debug_stick"
+  },
+  "show_notification": false
+}

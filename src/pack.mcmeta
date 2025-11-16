@@ -1,0 +1,22 @@
+{
+	"pack": {
+		"description": [
+			{
+				"text": "Made by Yoav TC\n",
+				"color": "dark_gray"
+			},
+			{
+				"text": "www.yoavtc.work",
+				"color": "blue",
+				"underlined": true
+			}
+		],
+		"pack_format": 88,
+		"min_format": 71,
+		"max_format": 88,
+		"supported_formats": [
+			71,
+			88
+		]
+	}
+}

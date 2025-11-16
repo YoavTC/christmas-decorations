@@ -1,0 +1,65 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "minecraft:snowball",
+    "A": "minecraft:spruce_sapling"
+  },
+  "pattern": [
+    "###",
+    "#A#",
+    "###"
+  ],
+  "result": {
+    "components": {
+      "minecraft:enchantment_glint_override": false,
+      "minecraft:item_model": "spruce_sapling",
+      "minecraft:custom_data": {
+        "christmasdeco": true,
+        "christmasdeco_id": "christmas_tree",
+        "christmasdeco_width": 1.0,
+        "christmasdeco_height": 2.0
+      },
+      "minecraft:custom_name": [
+        {
+          "text": "❄ ",
+          "color": "#ec2d53",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": "Christmas Tree Decoration",
+          "color": "white",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "text": " ❄",
+          "color": "#ec2d53",
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "minecraft:lore": [
+        [
+          {
+            "text": "Model by q8h",
+            "color": "dark_gray",
+            "bold": false,
+            "italic": false
+          }
+        ],
+        [
+          {
+            "text": "bde.gg/b/23341",
+            "color": "dark_gray",
+            "bold": false,
+            "italic": false
+          }
+        ]
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:debug_stick"
+  },
+  "show_notification": false
+}
