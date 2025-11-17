@@ -137,7 +137,15 @@ def create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, au
         "result": {
             "components": {
                 "minecraft:enchantment_glint_override": False,
-                "minecraft:item_model": texture,
+                "minecraft:item_model": "player_head",
+                "minecraft:profile": {
+                    "properties": [
+                        {
+                            "name": "textures",
+                            "value": texture
+                        }
+                    ]
+                },
                 "minecraft:custom_data": {
                     "christmasdeco": True,
                     "christmasdeco_id": christmasdeco_id,

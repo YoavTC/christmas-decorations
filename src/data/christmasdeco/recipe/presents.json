@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "#": "minecraft:sugar",
-    "A": "minecraft:red_dye"
+    "#": "minecraft:chest",
+    "A": "#wool"
   },
   "pattern": [
-    "#A ",
-    " # ",
-    " A "
+    "AAA",
+    "###",
+    "AAA"
   ],
   "result": {
     "components": {
@@ -17,14 +17,14 @@
         "properties": [
           {
             "name": "textures",
-            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWI0YjVjNzQ4MzA2MDlmOWNlN2JmYjhjYTI2ZmFjMTcxZWRiYzZiMjdjNjM3ZWExMDFmYzFhZTFhMmZhYzQ0MSJ9fX0="
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmY1YzQzMzkwODczMmI1MTJmNjg0NjFjMTRlZjAyMGJiMmY1NWQ5NmE2MWNkMWQ0NWVhMWU3ZWE4OTlmMWE2YiJ9fX0="
           }
         ]
       },
       "minecraft:custom_data": {
         "christmasdeco": true,
-        "christmasdeco_id": "candy_cane",
-        "christmasdeco_width": 1.0,
+        "christmasdeco_id": "presents",
+        "christmasdeco_width": 1.5,
         "christmasdeco_height": 1.0
       },
       "minecraft:custom_name": [
@@ -35,7 +35,7 @@
           "italic": false
         },
         {
-          "text": "Candy Cane Decoration",
+          "text": "Presents Decoration",
           "color": "white",
           "bold": true,
           "italic": false
@@ -50,7 +50,7 @@
       "minecraft:lore": [
         [
           {
-            "text": "Model by Herr_Aleks",
+            "text": "Model by q8h",
             "color": "dark_gray",
             "bold": false,
             "italic": false
@@ -58,7 +58,7 @@
         ],
         [
           {
-            "text": "bde.gg/b/23912",
+            "text": "bde.gg/b/23324",
             "color": "dark_gray",
             "bold": false,
             "italic": false

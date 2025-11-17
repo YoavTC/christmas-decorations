@@ -1,13 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "#": "minecraft:sugar",
-    "A": "minecraft:red_dye"
+    "#": "minecraft:oak_leaves",
+    "A": "minecraft:bell",
+    "B": "minecraft:glowstone"
   },
   "pattern": [
-    "#A ",
-    " # ",
-    " A "
+    "#B#",
+    "###",
+    "A A"
   ],
   "result": {
     "components": {
@@ -17,14 +18,14 @@
         "properties": [
           {
             "name": "textures",
-            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWI0YjVjNzQ4MzA2MDlmOWNlN2JmYjhjYTI2ZmFjMTcxZWRiYzZiMjdjNjM3ZWExMDFmYzFhZTFhMmZhYzQ0MSJ9fX0="
+            "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWUzOTI0OGIzNDFjODdjZTNlNDI5NGFjMjE0YzZmNzQ0Njg4ODljYjEyNzNhZTc0MTI5MDZmZDI4ZGIwOTdlOCJ9fX0="
           }
         ]
       },
       "minecraft:custom_data": {
         "christmasdeco": true,
-        "christmasdeco_id": "candy_cane",
-        "christmasdeco_width": 1.0,
+        "christmasdeco_id": "christmas_wreath",
+        "christmasdeco_width": 0.5,
         "christmasdeco_height": 1.0
       },
       "minecraft:custom_name": [
@@ -35,7 +36,7 @@
           "italic": false
         },
         {
-          "text": "Candy Cane Decoration",
+          "text": "Christmas Wreath Decoration",
           "color": "white",
           "bold": true,
           "italic": false
@@ -50,7 +51,7 @@
       "minecraft:lore": [
         [
           {
-            "text": "Model by Herr_Aleks",
+            "text": "Model by Daniya",
             "color": "dark_gray",
             "bold": false,
             "italic": false
@@ -58,7 +59,7 @@
         ],
         [
           {
-            "text": "bde.gg/b/23912",
+            "text": "bde.gg/b/121260",
             "color": "dark_gray",
             "bold": false,
             "italic": false

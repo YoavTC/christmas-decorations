@@ -16,13 +16,13 @@
                   "properties": [
                     {
                       "name": "textures",
-                      "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTI5MTljNjczMTdjNzY3ODQzOGZmNTIwYzk4ZGRlMGUzYjRkNjg3NjljODkzOGE1YTNkZTI5NjhlZGZjNzMxNCJ9fX0="
+                      "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjk5MmMyZWNmZTI4MTk2MWM3Mjc2NzRjNjM0NjUwYzIxM2U4Zjc0NGI0ZThmNDMxNzQ3OTU4Yjg2NjMyODBlMiJ9fX0="
                     }
                   ]
                 },
                 "minecraft:custom_data": {
                   "christmasdeco": true,
-                  "christmasdeco_id": "present",
+                  "christmasdeco_id": "snowballs",
                   "christmasdeco_width": 1.0,
                   "christmasdeco_height": 1.0
                 },
@@ -34,7 +34,7 @@
                     "italic": false
                   },
                   {
-                    "text": "Present Decoration",
+                    "text": "Snowballs Decoration",
                     "color": "white",
                     "bold": true,
                     "italic": false
@@ -49,7 +49,7 @@
                 "minecraft:lore": [
                   [
                     {
-                      "text": "Model by AHDPEY",
+                      "text": "Model by Daniya",
                       "color": "dark_gray",
                       "bold": false,
                       "italic": false
@@ -57,7 +57,7 @@
                   ],
                   [
                     {
-                      "text": "bde.gg/b/87003",
+                      "text": "bde.gg/b/121179",
                       "color": "dark_gray",
                       "bold": false,
                       "italic": false
