@@ -1,0 +1,66 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:debug_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": false,
+                "minecraft:item_model": "snow_golem_spawn_egg",
+                "minecraft:custom_data": {
+                  "christmasdeco": true,
+                  "christmasdeco_id": "snowman",
+                  "christmasdeco_width": 1.0,
+                  "christmasdeco_height": 2.0
+                },
+                "minecraft:custom_name": [
+                  {
+                    "text": "❄ ",
+                    "color": "#ec2d53",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": "Snowman Decoration",
+                    "color": "white",
+                    "bold": true,
+                    "italic": false
+                  },
+                  {
+                    "text": " ❄",
+                    "color": "#ec2d53",
+                    "bold": true,
+                    "italic": false
+                  }
+                ],
+                "minecraft:lore": [
+                  [
+                    {
+                      "text": "Model by Rasterio_",
+                      "color": "dark_gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ],
+                  [
+                    {
+                      "text": "bde.gg/b/26635",
+                      "color": "dark_gray",
+                      "bold": false,
+                      "italic": false
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
