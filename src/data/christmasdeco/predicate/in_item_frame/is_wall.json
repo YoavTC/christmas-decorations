@@ -1,0 +1,25 @@
+{
+	"condition": "minecraft:all_of",
+	"terms": [
+		{
+			"condition": "minecraft:inverted",
+			"term": {
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"nbt": "{Facing:1b}"
+				}
+			}
+		},
+		{
+			"condition": "minecraft:inverted",
+			"term": {
+				"condition": "minecraft:entity_properties",
+				"entity": "this",
+				"predicate": {
+					"nbt": "{Facing:0b}"
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,75 @@
+{
+	"criteria": {
+		"place": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"item": {},
+				"entity": [
+					{
+						"condition": "minecraft:all_of",
+						"terms": [
+							{
+								"condition": "minecraft:entity_properties",
+								"entity": "this",
+								"predicate": {
+									"type": "minecraft:item_frame"
+								}
+							},
+							{
+								"condition": "minecraft:any_of",
+								"terms": [
+									{
+										"condition": "minecraft:entity_properties",
+										"entity": "this",
+										"predicate": {
+											"nbt": "{Facing:2b}"
+										}
+									},
+									{
+										"condition": "minecraft:entity_properties",
+										"entity": "this",
+										"predicate": {
+											"nbt": "{Facing:5b}"
+										}
+									},
+									{
+										"condition": "minecraft:entity_properties",
+										"entity": "this",
+										"predicate": {
+											"nbt": "{Facing:3b}"
+										}
+									},
+									{
+										"condition": "minecraft:entity_properties",
+										"entity": "this",
+										"predicate": {
+											"nbt": "{Facing:4b}"
+										}
+									}
+								]
+							}
+						]
+					},
+					{
+						"condition": "minecraft:inverted",
+						"term": {
+							"condition": "minecraft:entity_properties",
+							"entity": "this",
+							"predicate": {
+								"nbt": "{Tags:[\"christmasdeco_origin\"]}"
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"place"
+		]
+	],
+	"rewards": {
+		"function": "christmasdeco:event_listeners/on_place_wall"
+	}
+}

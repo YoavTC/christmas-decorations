@@ -23,6 +23,7 @@
                 "minecraft:custom_data": {
                   "christmasdeco": true,
                   "christmasdeco_id": "candy_cane",
+                  "christmasdeco_placement": 3,
                   "christmasdeco_width": 1.0,
                   "christmasdeco_height": 1.0
                 },

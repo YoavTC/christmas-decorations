@@ -12,3 +12,4 @@ recipe give @a christmasdeco:presents_tower
 recipe give @a christmasdeco:snow_globe
 recipe give @a christmasdeco:gingerbread_men
 recipe give @a christmasdeco:train_toy
+recipe give @a christmasdeco:t

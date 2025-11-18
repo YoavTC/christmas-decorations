@@ -89,7 +89,7 @@ def numeric_to_pattern(numeric_pattern, keys):
     
     return pattern
 
-def create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, author, url, original_data=None):
+def create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, placement, author, url, original_data=None):
     """Create a recipe JSON structure from CSV data"""
     # Parse recipe keys
     key_items = [k.strip() for k in recipe_keys.split(',')]
@@ -116,7 +116,18 @@ def create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, au
     hitbox_parts = hitbox.split(',')
     width = float(hitbox_parts[0].strip())
     height = float(hitbox_parts[1].strip())
-    
+
+    # Parse placement enum
+    placement_mapping = {
+        'FLOOR': 1,
+        'WALL': 2,
+        'CEILING': 4,
+    }
+    placement_list = [p.strip().upper() for p in placement.split(',') if p.strip()]
+    placement_type = 0
+    for p in placement_list:
+        placement_type |= placement_mapping.get(p, 0)
+
     # Use original custom name if available, otherwise generate from item_id
     if original_data and 'custom_name' in original_data:
         custom_name = original_data['custom_name']
@@ -149,6 +160,7 @@ def create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, au
                 "minecraft:custom_data": {
                     "christmasdeco": True,
                     "christmasdeco_id": christmasdeco_id,
+                    "christmasdeco_placement": placement_type,
                     "christmasdeco_width": width,
                     "christmasdeco_height": height
                 },
@@ -209,6 +221,7 @@ def main():
     recipe_output_dir = os.path.join(project_root, 'src', 'data', 'christmasdeco', 'recipe')
     loot_table_output_dir = os.path.join(project_root, 'src', 'data', 'christmasdeco', 'loot_table')
     function_output_dir = os.path.join(project_root, 'src', 'data', 'christmasdeco', 'function')
+    # Base spawn directory now contains placement subfolders: floor, wall, ceiling
     spawn_function_dir = os.path.join(project_root, 'src', 'data', 'christmasdeco', 'function', 'spawn')
     original_recipe_dir = os.path.join(project_root, 'src', 'data', 'christmasdeco', 'recipe')
     
@@ -217,6 +230,14 @@ def main():
     os.makedirs(loot_table_output_dir, exist_ok=True)
     os.makedirs(function_output_dir, exist_ok=True)
     os.makedirs(spawn_function_dir, exist_ok=True)
+    # Ensure placement subdirectories exist
+    placement_subdirs = {
+        'FLOOR': os.path.join(spawn_function_dir, 'floor'),
+        'WALL': os.path.join(spawn_function_dir, 'wall'),
+        'CEILING': os.path.join(spawn_function_dir, 'ceiling'),
+    }
+    for p in placement_subdirs.values():
+        os.makedirs(p, exist_ok=True)
     
     # List to store all recipe IDs for the mcfunction file
     recipe_ids = []
@@ -231,14 +252,18 @@ def main():
             recipe_pattern = row['recipe pattern']
             texture = row['texture']
             hitbox = row['hitbox']
+            placement = row['placement']
             author = row['author']
             url = row['url']
+
+            # Derive placement list for spawn file generation (was previously undefined)
+            placement_list = [p.strip().upper() for p in placement.split(',') if p.strip()]
             
             # Load original keys to preserve key letter mappings
             original_data = load_original_keys(item_id, original_recipe_dir)
             
             # Generate recipe JSON
-            recipe = create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, author, url, original_data)
+            recipe = create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, placement, author, url, original_data)
             
             # Write recipe to file
             recipe_output_file = os.path.join(recipe_output_dir, f'{item_id}.json')
@@ -253,12 +278,15 @@ def main():
             with open(loot_table_output_file, 'w', encoding='utf-8') as out_f:
                 json.dump(loot_table, out_f, indent=2, ensure_ascii=False)
             
-            # Generate spawn function file only if it doesn't exist (preserve existing)
-            spawn_function_file = os.path.join(spawn_function_dir, f'{item_id}.mcfunction')
-            if not os.path.exists(spawn_function_file):
-                with open(spawn_function_file, 'w', encoding='utf-8') as out_f:
-                    out_f.write('')  # Create empty file
-                print(f'Generated: spawn/{item_id}.mcfunction (empty)')
+            # Generate spawn function files per placement (empty if new)
+            for placement_flag in placement_list:
+                subdir_key = placement_flag.upper()
+                if subdir_key in placement_subdirs:
+                    spawn_function_file = os.path.join(placement_subdirs[subdir_key], f'{item_id}.mcfunction')
+                    if not os.path.exists(spawn_function_file):
+                        with open(spawn_function_file, 'w', encoding='utf-8') as out_f:
+                            out_f.write('')  # Create empty file for manual editing later
+                        print(f'Generated: spawn/{subdir_key.lower()}/{item_id}.mcfunction (empty)')
             
             # Add to recipe IDs list
             recipe_ids.append(item_id)

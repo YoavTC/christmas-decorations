@@ -24,6 +24,7 @@
       "minecraft:custom_data": {
         "christmasdeco": true,
         "christmasdeco_id": "presents",
+        "christmasdeco_placement": 1,
         "christmasdeco_width": 1.5,
         "christmasdeco_height": 1.0
       },

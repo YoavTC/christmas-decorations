@@ -16,16 +16,16 @@
                   "properties": [
                     {
                       "name": "textures",
-                      "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTc5NzU5MWE5MTdmYjRjNmJhMGU5OTlmNzUzZDM0NWY2ZDcwYzU2NmJiOWJlZTBhYTczZTE5MTM2N2I4OTA5ZiJ9fX0="
+                      "value": "a"
                     }
                   ]
                 },
                 "minecraft:custom_data": {
                   "christmasdeco": true,
-                  "christmasdeco_id": "hot_chocolate",
-                  "christmasdeco_placement": 1,
-                  "christmasdeco_width": 0.5,
-                  "christmasdeco_height": 0.5
+                  "christmasdeco_id": "t",
+                  "christmasdeco_placement": 7,
+                  "christmasdeco_width": 1.0,
+                  "christmasdeco_height": 1.0
                 },
                 "minecraft:custom_name": [
                   {
@@ -35,7 +35,7 @@
                     "italic": false
                   },
                   {
-                    "text": "Hot Chocolate Decoration",
+                    "text": "T Decoration",
                     "color": "white",
                     "bold": true,
                     "italic": false
@@ -50,7 +50,7 @@
                 "minecraft:lore": [
                   [
                     {
-                      "text": "Model by Daniya",
+                      "text": "Model by me",
                       "color": "dark_gray",
                       "bold": false,
                       "italic": false
@@ -58,7 +58,7 @@
                   ],
                   [
                     {
-                      "text": "bde.gg/b/121846",
+                      "text": "a",
                       "color": "dark_gray",
                       "bold": false,
                       "italic": false

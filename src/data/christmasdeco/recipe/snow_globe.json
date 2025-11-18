@@ -25,6 +25,7 @@
       "minecraft:custom_data": {
         "christmasdeco": true,
         "christmasdeco_id": "snow_globe",
+        "christmasdeco_placement": 1,
         "christmasdeco_width": 0.75,
         "christmasdeco_height": 0.75
       },

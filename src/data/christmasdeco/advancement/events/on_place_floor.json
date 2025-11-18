@@ -33,6 +33,6 @@
 		]
 	],
 	"rewards": {
-		"function": "christmasdeco:event_listeners/on_place"
+		"function": "christmasdeco:event_listeners/on_place_floor"
 	}
 }

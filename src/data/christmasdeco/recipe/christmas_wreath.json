@@ -25,6 +25,7 @@
       "minecraft:custom_data": {
         "christmasdeco": true,
         "christmasdeco_id": "christmas_wreath",
+        "christmasdeco_placement": 2,
         "christmasdeco_width": 0.5,
         "christmasdeco_height": 1.0
       },
