@@ -9,3 +9,6 @@ recipe give @a christmasdeco:christmas_wreath
 recipe give @a christmasdeco:cookie_jar
 recipe give @a christmasdeco:hot_chocolate
 recipe give @a christmasdeco:presents_tower
+recipe give @a christmasdeco:snow_globe
+recipe give @a christmasdeco:gingerbread_men
+recipe give @a christmasdeco:train_toy
