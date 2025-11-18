@@ -7,3 +7,4 @@ recipe give @a christmasdeco:christmas_lights
 recipe give @a christmasdeco:presents
 recipe give @a christmasdeco:christmas_wreath
 recipe give @a christmasdeco:cookie_jar
+recipe give @a christmasdeco:hot_chocolate
