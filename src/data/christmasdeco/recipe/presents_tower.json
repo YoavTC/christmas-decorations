@@ -5,9 +5,9 @@
     "A": "#wool"
   },
   "pattern": [
-    "AA ",
-    "## ",
-    "AA "
+    "AAA",
+    "###",
+    "AAA"
   ],
   "result": {
     "components": {
@@ -23,9 +23,9 @@
       },
       "minecraft:custom_data": {
         "christmasdeco": true,
-        "christmasdeco_id": "presents",
-        "christmasdeco_width": 1.5,
-        "christmasdeco_height": 1.0
+        "christmasdeco_id": "presents_tower",
+        "christmasdeco_width": 1.0,
+        "christmasdeco_height": 2.0
       },
       "minecraft:custom_name": [
         {
@@ -35,7 +35,7 @@
           "italic": false
         },
         {
-          "text": "Presents Decoration",
+          "text": "Presents Tower Decoration",
           "color": "white",
           "bold": true,
           "italic": false
@@ -58,7 +58,7 @@
         ],
         [
           {
-            "text": "bde.gg/b/23324",
+            "text": "bde.gg/b/23795",
             "color": "dark_gray",
             "bold": false,
             "italic": false
