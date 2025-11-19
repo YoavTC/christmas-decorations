@@ -2,7 +2,7 @@
 $summon interaction ~ ~-0.03 ~ {data:{christmasdeco_id:"$(christmasdeco_id)"},Tags:[christmasdeco_origin,christmasdeco_origin_unset],width:0,height:0}
 $summon interaction ~ ~-0.03 ~ {Tags:[christmasdeco_triggerbox],width:$(christmasdeco_width),height:$(christmasdeco_height)}
 
-$execute if predicate christmasdeco:in_item_frame/is_wall as @n[tag=christmasdeco_triggerbox] positioned as @s run tp @s ~ ~$(christmasdeco_y_offset) ~
+$execute unless predicate christmasdeco:in_item_frame/is_floor as @n[tag=christmasdeco_triggerbox] positioned as @s run tp @s ~ ~$(christmasdeco_y_offset) ~
 
 # Store item frame facing direction
 data modify entity @n[type=interaction,tag=christmasdeco_origin] data.Facing set from entity @s Facing
