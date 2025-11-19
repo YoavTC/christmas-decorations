@@ -25,7 +25,8 @@
                   "christmasdeco_id": "christmas_wreath",
                   "christmasdeco_placement": 2,
                   "christmasdeco_width": 0.5,
-                  "christmasdeco_height": 1.0
+                  "christmasdeco_height": 1.0,
+                  "christmasdeco_y_offset": -0.5
                 },
                 "minecraft:custom_name": [
                   {

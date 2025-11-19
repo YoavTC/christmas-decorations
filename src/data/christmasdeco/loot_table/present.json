@@ -25,7 +25,8 @@
                   "christmasdeco_id": "present",
                   "christmasdeco_placement": 1,
                   "christmasdeco_width": 1.0,
-                  "christmasdeco_height": 1.0
+                  "christmasdeco_height": 1.0,
+                  "christmasdeco_y_offset": 0.0
                 },
                 "minecraft:custom_name": [
                   {

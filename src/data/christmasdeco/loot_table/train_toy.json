@@ -25,7 +25,8 @@
                   "christmasdeco_id": "train_toy",
                   "christmasdeco_placement": 1,
                   "christmasdeco_width": 2.5,
-                  "christmasdeco_height": 0.5
+                  "christmasdeco_height": 0.5,
+                  "christmasdeco_y_offset": 0.0
                 },
                 "minecraft:custom_name": [
                   {

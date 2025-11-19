@@ -89,7 +89,7 @@ def numeric_to_pattern(numeric_pattern, keys):
     
     return pattern
 
-def create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, placement, author, url, original_data=None):
+def create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, placement, y_offset, author, url, original_data=None):
     """Create a recipe JSON structure from CSV data"""
     # Parse recipe keys
     key_items = [k.strip() for k in recipe_keys.split(',')]
@@ -128,6 +128,9 @@ def create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, pl
     for p in placement_list:
         placement_type |= placement_mapping.get(p, 0)
 
+    # Parse y offset as int
+    y_offset_float = float(y_offset)
+
     # Use original custom name if available, otherwise generate from item_id
     if original_data and 'custom_name' in original_data:
         custom_name = original_data['custom_name']
@@ -162,7 +165,8 @@ def create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, pl
                     "christmasdeco_id": christmasdeco_id,
                     "christmasdeco_placement": placement_type,
                     "christmasdeco_width": width,
-                    "christmasdeco_height": height
+                    "christmasdeco_height": height,
+                    "christmasdeco_y_offset": y_offset_float
                 },
                 "minecraft:custom_name": [
                     {
@@ -253,6 +257,7 @@ def main():
             texture = row['texture']
             hitbox = row['hitbox']
             placement = row['placement']
+            y_offset = row['y offset']
             author = row['author']
             url = row['url']
 
@@ -263,7 +268,7 @@ def main():
             original_data = load_original_keys(item_id, original_recipe_dir)
             
             # Generate recipe JSON
-            recipe = create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, placement, author, url, original_data)
+            recipe = create_recipe_json(item_id, recipe_keys, recipe_pattern, texture, hitbox, placement, y_offset, author, url, original_data)
             
             # Write recipe to file
             recipe_output_file = os.path.join(recipe_output_dir, f'{item_id}.json')

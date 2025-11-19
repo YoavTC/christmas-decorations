@@ -2,6 +2,8 @@
 $summon interaction ~ ~-0.03 ~ {data:{christmasdeco_id:"$(christmasdeco_id)"},Tags:[christmasdeco_origin,christmasdeco_origin_unset],width:0,height:0}
 $summon interaction ~ ~-0.03 ~ {Tags:[christmasdeco_triggerbox],width:$(christmasdeco_width),height:$(christmasdeco_height)}
 
+$execute if predicate christmasdeco:in_item_frame/is_wall as @n[tag=christmasdeco_triggerbox] positioned as @s run tp @s ~ ~$(christmasdeco_y_offset) ~
+
 # Store item frame facing direction
 data modify entity @n[type=interaction,tag=christmasdeco_origin] data.Facing set from entity @s Facing
 
@@ -13,9 +15,13 @@ $execute if predicate christmasdeco:in_item_frame/is_ceiling run function christ
 # Tagging
 execute as @n[tag=christmasdeco_parent,distance=..2] on passengers run tag @s add christmasdeco_unset
 tag @p add christmasdeco_placer
+tag @s add christmasdeco_item_frame
 
 # Rotate towards the player
-execute unless predicate christmasdeco:in_item_frame/is_wall as @p[tag=christmasdeco_placer] store result score @s christmasdeco.dir run data get entity @s Rotation[0]
+execute as @p[tag=christmasdeco_placer] store result score @s christmasdeco.dir run data get entity @s Rotation[0]
+execute as @s store result score @s christmasdeco.dir run data get entity @s Rotation[0]
+
+execute if predicate christmasdeco:in_item_frame/is_wall as @e[tag=christmasdeco_unset,distance=..2] run function christmasdeco:rotate_wall
 execute unless predicate christmasdeco:in_item_frame/is_wall as @e[tag=christmasdeco_unset,distance=..2] run function christmasdeco:rotate
 
 # Mount children to parent container
