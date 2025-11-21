@@ -23,6 +23,9 @@ def generate_recipe_html_from_csv(csv_path):
             item_id = row['id']
             author = row['author']
             url = row['url']
+
+            if 'ornament' in item_id:
+                continue
             
             # Convert item_id to display name (e.g., "bamboo_flower_cart" -> "Bamboo Flower Cart")
             display_name = item_id.replace('_', ' ').title()
