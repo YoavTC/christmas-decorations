@@ -54,6 +54,20 @@
             <h2>Recipe Gallery</h2>
             <div class="recipe-list">
                 <figure>
+                    <img src="recipe images/rainbow_ornament.png">
+                    <figcaption>
+                        <h3>Rainbow Ornament</h3>
+                        <a href="https://minecraft-heads.com/" target="_blank">minecraft-heads</a>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img id="rotating-ornament-imgs" src="recipe images/red_ornament.png">
+                    <figcaption>
+                        <h3>Ornaments</h3>
+                        <a href="https://minecraft-heads.com/" target="_blank">minecraft-heads</a>
+                    </figcaption>
+                </figure>
+                <figure>
                     <img src="recipe images/candy_cane.png">
                     <figcaption>
                         <h3>Candy Cane</h3>
@@ -154,5 +168,32 @@
             </div>
         </section>
     </main>
+    <script>
+        const ornamentImages = [
+            'recipe images/black_ornament.png',
+            'recipe images/blue_ornament.png',
+            'recipe images/brown_ornament.png',
+            'recipe images/cyan_ornament.png',
+            'recipe images/gray_ornament.png',
+            'recipe images/green_ornament.png',
+            'recipe images/light_blue_ornament.png',
+            'recipe images/light_gray_ornament.png',
+            'recipe images/lime_ornament.png',
+            'recipe images/magenta_ornament.png',
+            'recipe images/orange_ornament.png',
+            'recipe images/pink_ornament.png',
+            'recipe images/purple_ornament.png',
+            'recipe images/red_ornament.png',
+            'recipe images/yellow_ornament.png'
+        ];
+
+        let currentIndex = 0;
+        const ornamentImg = document.getElementById('rotating-ornament-imgs');
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % ornamentImages.length;
+            ornamentImg.src = ornamentImages[currentIndex];
+        }, 1000);
+    </script>
 </body>
 </html>
