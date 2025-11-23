@@ -2,12 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": "minecraft:glowstone_dust",
-    "A": "minecraft:lime_stained_glass_pane"
+    "A": "minecraft:red_stained_glass_pane",
+    "B": "minecraft:orange_stained_glass_pane",
+    "C": "minecraft:yellow_stained_glass_pane",
+    "D": "minecraft:lime_stained_glass_pane",
+    "E": "minecraft:cyan_stained_glass_pane",
+    "F": "minecraft:blue_stained_glass_pane",
+    "G": "minecraft:purple_stained_glass_pane",
+    "H": "minecraft:pink_stained_glass_pane"
   },
   "pattern": [
-    "AAA",
-    "A#A",
-    "AAA"
+    "ABC",
+    "D#E",
+    "FGH"
   ],
   "result": {
     "components": {
