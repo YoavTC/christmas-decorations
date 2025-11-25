@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "#": "minecraft:glowstone",
+    "#": "minecraft:glowstone_dust",
     "A": "minecraft:lime_stained_glass_pane"
   },
   "pattern": [
