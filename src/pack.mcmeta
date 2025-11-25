@@ -11,12 +11,22 @@
 				"underlined": true
 			}
 		],
-		"pack_format": 88,
-		"min_format": 71,
+		"pack_format": 81,
+		"min_format": 81,
 		"max_format": 88,
 		"supported_formats": [
-			71,
+			81,
 			88
+		]
+	},
+	"overlays": {
+		"entries": [
+			{
+				"directory": "data_81",
+				"max_format": 81,
+				"min_format": 81,
+				"formats": 81
+			}
 		]
 	}
 }
