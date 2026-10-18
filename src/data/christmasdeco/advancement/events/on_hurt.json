@@ -1,21 +1,22 @@
 {
-	"criteria": {
-		"hurt": {
-			"trigger": "minecraft:player_hurt_entity",
-			"conditions": {
-				"entity": {
-					"type": "minecraft:interaction",
-					"nbt": "{Tags:[christmasdeco_triggerbox]}"
-				}
-			}
-		}
-	},
-	"requirements": [
-		[
-			"hurt"
-		]
-	],
-	"rewards": {
-		"function": "christmasdeco:event_listeners/on_hurt"
-	}
+  "criteria": {
+    "hurt": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:interaction",
+            "minecraft:entity_tags": {
+              "all_of": ["christmasdeco_triggerbox"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "christmasdeco:event_listeners/on_hurt"
+  }
 }

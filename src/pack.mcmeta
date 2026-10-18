@@ -11,12 +11,12 @@
 				"underlined": true
 			}
 		],
-		"pack_format": 81,
+		"pack_format": 121,
 		"min_format": 81,
-		"max_format": 88,
+		"max_format": 121,
 		"supported_formats": [
 			81,
-			88
+			121
 		]
 	},
 	"overlays": {
